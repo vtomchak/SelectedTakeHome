@@ -15,7 +15,7 @@ mongoose.connect(keys.mongoURI, {
   useUnifiedTopology: true,
 });
 
-require('./routes/auth')(app);
+// require('./routes/auth')(app);
 
 if (process.env.NODE_ENV === 'production') {
   //Express should serve up production assests
@@ -26,5 +26,5 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(_dirname, 'client', 'build', 'index.html'));
   });
 }
-const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+// const PORT =
+app.listen(process.env.PORT || 5000);

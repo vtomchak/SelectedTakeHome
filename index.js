@@ -2,20 +2,20 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const keys = require('./config/keys');
+
+require('./routes/auth')(app);
 require('./models/User');
 
 const User = mongoose.model('users');
-// app.get('/', (req, res) => {
-//   res.send({ hi: 'there there' });
-// });
+app.get('/', (req, res) => {
+  res.send({ hi: 'there there' });
+});
 
 mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
 });
-
-require('./routes/auth')(app);
 
 if (process.env.NODE_ENV === 'production') {
   //Express should serve up production assests

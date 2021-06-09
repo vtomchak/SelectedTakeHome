@@ -1,6 +1,8 @@
-// const router = require('express').Router()
-// const {User, Order, Order_Detail} = require('../db/models')
-// module.exports = router
+module.exports = (app) => {
+  app.get('/auth/me', async (req, res) => {
+    console.log('user');
+  });
+};
 
 // router.post('/login', async (req, res, next) => {
 //   try {

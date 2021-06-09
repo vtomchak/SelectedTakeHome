@@ -5,9 +5,9 @@ const keys = require('./config/keys');
 require('./models/User');
 
 const User = mongoose.model('users');
-app.get('/', (req, res) => {
-  res.send({ hi: 'there there' });
-});
+// app.get('/', (req, res) => {
+//   res.send({ hi: 'there there' });
+// });
 
 mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
@@ -15,7 +15,7 @@ mongoose.connect(keys.mongoURI, {
   useUnifiedTopology: true,
 });
 
-// require('./routes/auth')(app);
+require('./routes/auth')(app);
 
 if (process.env.NODE_ENV === 'production') {
   //Express should serve up production assests

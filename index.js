@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const keys = require('./config/keys');
-
+const bodyParser = require('body-parser');
 require('./routes/auth')(app);
 require('./models/User');
 
@@ -10,7 +10,7 @@ const User = mongoose.model('users');
 // app.get('/', (req, res) => {
 //   res.send({ hi: 'there there' });
 // });
-
+app.use(bodyParser.json());
 mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
   useCreateIndex: true,

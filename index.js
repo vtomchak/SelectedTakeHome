@@ -7,9 +7,9 @@ require('./routes/auth')(app);
 require('./models/User');
 
 const User = mongoose.model('users');
-app.get('/', (req, res) => {
-  res.send({ hi: 'there there' });
-});
+// app.get('/', (req, res) => {
+//   res.send({ hi: 'there there' });
+// });
 
 mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
@@ -27,4 +27,4 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 // const PORT =
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 5000);

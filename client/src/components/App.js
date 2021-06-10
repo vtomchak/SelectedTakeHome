@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
-import Landing from './Landing';
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>SurveyNew</h2>;
+import Card from './Card';
+import BackButton from './BackButton';
+import ContinueButton from './ContinueButton';
+import Button from './Button';
+import AboutYouForm from './AboutYouForm';
 
 class App extends Component {
   componentDidMount() {
@@ -14,14 +16,12 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='grey' style={{ height: '100vh' }}>
         <BrowserRouter>
           <div>
             <Header />
             <div className='container'>
-              <Route exact path='/' component={Landing} />
-              <Route exact path='/surveys' component={Dashboard} />
-              <Route path='/surveys/new' component={SurveyNew} />
+              <Route exact path='/' component={Card} />
             </div>
           </div>
         </BrowserRouter>

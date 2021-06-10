@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-      <nav>
+      <nav className='white'>
         <div className='nav-wrapper'>
-          <a className='left brand-logo'>Selected</a>
+          <a className='left brand-logo black'>Selected</a>
           <ul className='right'>
             <li>
               <a>Sign Up</a>

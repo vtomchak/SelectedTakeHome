@@ -3,6 +3,7 @@ import AboutYouForm from './AboutYouForm';
 import BackButton from './BackButton';
 import ContinueButton from './ContinueButton';
 import ReactChipInput from 'react-chip-input';
+import { Badge } from './StyledComponents';
 
 class Card extends Component {
   constructor(props) {
@@ -83,16 +84,9 @@ class Card extends Component {
                               padding: '2% 0px 2% 0px',
                             }}
                           >
-                            <span
-                              className='new badge teal-text text-darken-4 white left col s3'
-                              data-badge-caption=''
-                              style={{
-                                fontWeight: 'bold',
-                                padding: '2% 2% 8% 6%',
-                              }}
-                            >
+                            <Badge className='new badge teal-text text-darken-4 white left col s3'>
                               {tab.id}
-                            </span>
+                            </Badge>
                             {tab.name}
                           </h6>
                         </div>

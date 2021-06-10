@@ -18,10 +18,11 @@ class ContinueButton extends Component {
           this.props.value.firstName.length &&
           this.props.value.lastName.length) ||
         (this.props.value.value === 'Subjects' &&
-          this.props.value.subjects.length >= 2) ? (
+          this.props.value.firstSubject.length &&
+          this.props.value.secondSubject.length) ? (
           <div style={{ textAlign: 'center' }}>
             <button
-              className='right waves-effect orange btn'
+              className='right waves-effect orange darken-4 btn'
               onClick={this.handleClick}
             >
               Continue

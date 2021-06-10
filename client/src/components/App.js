@@ -6,10 +6,6 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Card from './Card';
-import BackButton from './BackButton';
-import ContinueButton from './ContinueButton';
-import Button from './Button';
-import AboutYouForm from './AboutYouForm';
 
 class App extends Component {
   componentDidMount() {

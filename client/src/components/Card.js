@@ -51,8 +51,6 @@ class Card extends Component {
     const target = event.target;
     target.name === 'first' && this.setState({ firstName: event.target.value });
     target.name === 'last' && this.setState({ lastName: event.target.value });
-
-    // console.log(this.state);
   }
 
   render() {

@@ -84,7 +84,7 @@ class Card extends Component {
                               padding: '2% 0px 2% 0px',
                             }}
                           >
-                            <Badge className='new badge teal-text text-darken-4 white left col s3'>
+                            <Badge className='teal-text text-darken-4 white left col s3'>
                               {tab.id}
                             </Badge>
                             {tab.name}

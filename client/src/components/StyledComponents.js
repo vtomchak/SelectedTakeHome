@@ -10,7 +10,7 @@ import styled from 'styled-components';
 export const Badge = styled.span`
   min-width: 22px;
   max-width: 22px;
-
+border-radius: 50%
   margin-left: 0px;
   text-align: center;
   font-size: 22px;
